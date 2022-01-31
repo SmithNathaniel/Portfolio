@@ -1,0 +1,192 @@
+<style>
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/2206d6cc490084998d531e8c1b2cbb4a?family=Druk+Wide+Bold" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.scss">
+\    <link  href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="hero-img"></div>
+
+  <div class="wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="" class="logo"> Smith<span>.</span></a>
+        <div class="nav-links">
+          <a href="" class="fill">Home</a>
+          <a href="" class="fill">Project</a>
+          <a href="" class="fill">Studio</a>
+          <a href="" class="fill">ABOUT</a>
+          <div class="toggle-menu scale-effect">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div class="toggle-menu scale-effect">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+     </nav>
+    <section class="hero-section">
+     <div class="container">
+       <div class="text-container">
+         <span>Nathaniel Smith</span>
+         <h1>Creating solutions that engage users </h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim tellus risus, sed rhoncus ante commodo vitae.</p>
+         <svg  class="more-info" viewBox="0 0 16 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z" fill="black"/>
+          </svg>
+       </div>
+       
+        <div class="image">
+          <img src="/rick-muigo-btmR5eu8koo-unsplash.jpg" alt="" srcset="">
+        </div>
+        
+     </div>
+        
+        <!-- <h3 class="ui-water">UI</h3>
+        <h3 class="ux-water">UX</h3>
+        <h3 class="web-water">WEB DEVELOP</h3> -->
+      
+
+
+
+
+            
+   
+    </section>
+              
+  
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>''
+
+      <div  id="cursor" class="cursor"></div>
+      <div  id="cursor" class="cursor2"></div>
+      <section>
+          <h2 class="section-head">SOME OF MY WORK</h2>
+    
+      </section>
+      <section>
+          <h2 class="section-head">ABOUT ME </h2>
+      </section>
+      <section>
+          <h2 class="section-head">HAVE A PROJECT IN-MIND </h2>
+      </section>
+  </div>
+  
+   
+   
+    <script>
+        var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.left = x + "px";
+  cursor.style.top = y + "px";
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+  })
+  window.requestAnimationFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+var speed = 5000;
+(function currencySlide(){
+    var currencyPairWidth = $('span:first-child').outerWidth();
+    $(".marquee").animate({marginLeft:-currencyPairWidth},speed, 'linear', function(){
+      $(this).css({marginLeft:0}).find("span:last").after($(this).find("span:first"));
+        });
+        requestAnimationFrame(currencySlide);
+})();
+
+    </script>
+    <script>
+      window.requestAnimationFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+var speed = 5000;
+(function currencySlide(){
+    var currencyPairWidth = $('span:first-child').outerWidth();
+    $(".marquee").animate({marginLeft:-currencyPairWidth},speed, 'linear', function(){
+      $(this).css({marginLeft:0}).find("span:last").after($(this).find("span:first"));
+        });
+        requestAnimationFrame(currencySlide);
+})();
+
+    </script>
+    <script>
+      let toggleMenu = document.querySelectorAll(".navbar .toggle-menu");
+let navLinks = document.querySelector(".nav-links");
+let links = document.querySelectorAll(".nav-links a");
+
+/*
+    Main Function
+*/
+function toggleLinks(ourArray, ourFubction) {
+  ourArray.forEach((element) => {
+    element.addEventListener("click", () => {
+      ourFubction();
+    });
+  });
+}
+/*
+    Show & Hide Links Sidebar
+*/
+function toggleNavLinks() {
+  navLinks.classList.toggle("active");
+}
+
+toggleLinks(toggleMenu, toggleNavLinks);
+toggleLinks(links, toggleNavLinks);
+
+    </script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
+</html>
