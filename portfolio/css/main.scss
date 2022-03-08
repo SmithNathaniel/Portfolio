@@ -314,7 +314,7 @@ path {
 
 @media only screen and (min-width: 1200px) {
   .wrapper {
-      width: 1200px;
+      width: 1440px;
       margin: 0 auto;
   }
 
@@ -401,7 +401,7 @@ section.marquee{
  section.about  {
    
    width: 100%;
-   min-height: 500px;
+   min-height: 200px;
    background-color: #00f7ff;
  }
  .some-page-wrapper {
@@ -418,7 +418,7 @@ section.marquee{
 .column {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
+  flex-basis: 50%;
   flex: 1;
 }
 
@@ -473,9 +473,8 @@ section.marquee{
     border-radius: 1%;
   }
   .about-name {
-    position: absolute;
-    margin-top: 2.4em;
-    margin-left: 12.4em;
+    width: 100%;
+    
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Druk Wide Bold';
@@ -820,3 +819,32 @@ textarea:not(:placeholder-shown) + label + .field__clear{
 }
 /////////////////////
 //END CONTACT
+section.marquee {
+  height: 250px;
+  width: 100%;
+  background-color: #00cfd6;
+}
+
+.marquee-wrapper {
+ 
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  margin: auto;
+  background: #000;
+  overflow: hidden;
+  bottom: 50%;
+}
+.box {
+  height:65px;
+  position:absolute;
+  background:transparent;
+  font-size: 30px;
+  line-height:65px;
+  text-align:center;
+  color: #fff;
+  text-transform: uppercase;
+}
+.boxes {
+  position:relative;
+}
