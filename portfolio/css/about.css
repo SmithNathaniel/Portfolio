@@ -62,28 +62,6 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("https://images.unsplash.com/photo-1529944376877-87aa47d67119?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
-  background-size: cover;
-  background-position-x: 20%;
-  background-position-y: 20%;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
-}
-
 .logo {
   color: white;
   font-weight: bolder;
@@ -175,17 +153,6 @@ section.hero {
   animation: moveArrow 1s alternate-reverse infinite;
 }
 
-path {
-  fill: #00f7ff;
-}
-
-img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 11em;
-}
-
 .title {
   font-weight: bold;
   font-size: 1.25rem;
@@ -220,31 +187,6 @@ img {
   .subhead {
     font-size: 1.1rem;
     margin-top: -1.7em;
-  }
-  nav div {
-    position: absolute;
-    top: 90%;
-    left: 80%;
-    width: 5rem;
-    height: 5rem;
-    margin-top: 15rem;
-    list-style: none;
-  }
-  nav div:last-of-type {
-    left: auto;
-    right: 3%;
-  }
-  .prev, .next {
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 100%;
-    -webkit-transition: -webkit-box-shadow .3s;
-    transition: -webkit-box-shadow .3s;
-    transition: box-shadow .3s;
-    transition: box-shadow .3s, -webkit-box-shadow .3s;
   }
 }
 
@@ -301,17 +243,11 @@ img {
   path {
     fill: #00f7ff;
   }
-  .about-column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 300px;
-    background-color: antiquewhite;
-  }
-  .about-row:after {
-    content: " ";
-    display: table;
-    clear: both;
+  .about-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -319,6 +255,12 @@ img {
   .wrapper {
     width: 1200px;
     margin: 0 auto;
+  }
+  .about-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .feature {
     gap: 0;
@@ -409,64 +351,20 @@ img {
   }
 }
 
-.outer-container {
-  width: 100%;
-  height: auto;
+.about-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  right: 15em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.marquee {
-  margin-top: -5rem;
-  position: relative;
-}
-
-#text {
-  position: absolute;
-  white-space: nowrap;
-  right: -4150px;
-  font-size: 3.5em;
-  font-family: 'Druk Wide Bold';
-  font-weight: bolder;
-}
-
-#text span {
-  color: aliceblue;
-}
-
-section.marquee {
-  min-height: 150px;
-}
-
-section.about {
-  width: 100%;
-  min-height: 500px;
-  background-color: #00f7ff;
-}
-
-.some-page-wrapper {
-  margin-top: 5em;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
 }
 
-.column {
+.about-col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,75 +377,59 @@ section.about {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.blue-column {
   height: 500px;
 }
 
-.green-column {
+.left-col {
   height: 500px;
+}
+
+.right-col {
+  height: 500px;
+}
+
+section.skills-section {
+  min-height: 150px;
+  background-color: #00f7ff;
+  margin-top: 4em;
+}
+
+section.contact-section {
+  min-height: 400px;
+  margin-top: 4em;
 }
 
 .about-img {
-  height: 99%;
-  margin-top: 2px;
-  border-radius: 5%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  width: 100%;
+  height: 400px;
+  background-color: antiquewhite;
+  margin: 1.5em 3em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  border-radius: .4em;
 }
 
-.about-name {
-  text-transform: uppercase;
-  font-family: 'Druk Wide Bold';
-  font-size: 1.7rem;
-  color: white;
+.second-img {
+  background-image: url("https://images.unsplash.com/photo-1481201779555-88fcea2968ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
 }
 
-.about-info {
+.para {
   margin-top: 6.5em;
-}
-
-.about-info p {
+  width: 90%;
   color: white;
-  font-weight: lighter;
 }
 
-@media only screen and (min-width: 920px) {
-  .row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .about-heading {
-    font-size: 5.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: -.2em;
-    margin-top: 1em;
-    color: #00cfd6;
-  }
-  .about-img {
-    height: 99%;
-    margin-top: 2px;
-    border-radius: 1%;
-  }
-  .about-name {
-    position: absolute;
-    margin-top: 2.4em;
-    margin-left: 12.4em;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Druk Wide Bold';
-    font-size: 2.7rem;
-    color: white;
-  }
-  .about-info {
-    margin-top: 6.5em;
-    width: 85%;
-    padding: 3em;
-  }
+.para-1 {
+  width: 45%;
+  color: white;
+}
+
+.contact-head {
+  color: white;
+  width: 75%;
+  font-size: 3.9em;
 }
 
 .the-arrow {
@@ -737,244 +619,33 @@ section.about {
   position: relative;
 }
 
-section.contact {
-  min-height: 600px;
-  background-color: #00f7ff;
-}
-
-.contact-heading {
-  color: #00f7ff;
-  text-transform: uppercase;
-  font-size: 5.5em;
-  width: 75%;
-  margin-top: 1.3em;
-}
-
-.contact-subhead {
-  font-size: 1.5em;
-  margin-bottom: -.3em;
-  color: white;
-}
-
-.contact-subhead span {
-  color: #00f7ff;
-  font-weight: 600;
-}
-
-.contact-subpara {
-  color: #9d9d9d;
-  margin-bottom: 1.3em;
-}
-
-.contact-info-form {
-  padding: 25px 50px;
-}
-
-.contact-info {
-  padding: 2px 0px;
-  width: 92%;
-}
-
-.socialmedia-icons {
-  margin-top: 1.5em;
-}
-
-.tm-contact-icon {
+.btn {
   display: inline-block;
-  margin-right: 25px;
-  color: #9d9d9d;
-}
-
-.tm-contact-link {
-  display: list-item;
-  list-style: none;
-  margin-bottom: 10px;
+  padding: 8px 24px;
+  border: solid 1px transparent;
+  border-radius: 4px;
   text-decoration: none;
-  color: #9d9d9d;
+  font-size: 14px;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 
-.fa {
-  padding: 10px;
-  width: 32px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
+.btn-primary {
+  border-color: #17a2bb;
+  color: #17a2bb;
 }
 
-.fas {
-  color: #9d9d9d;
+.btn-primary:hover {
+  background: #17a2bb;
+  color: #fff;
 }
 
-p {
-  padding: 4px 2px;
-}
-
-i {
-  margin-left: 8px;
-}
-
-.fa-facebook {
-  color: #9d9d9d;
-}
-
-.fa-twitter {
-  color: #9d9d9d;
-}
-
-.fa-linkedin {
-  color: #9d9d9d;
-}
-
-.fa-instagram {
-  color: #9d9d9d;
-}
-
-.fa-dribbble {
-  color: #9d9d9d;
-}
-
-.fa:hover {
-  color: white;
-  -webkit-transition: ease-in 500ms;
-  transition: ease-in 500ms;
-  -webkit-animation: updown 1s;
-          animation: updown 1s;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-}
-
-@-webkit-keyframes updown {
-  from {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transform: scale(2);
-            transform: scale(2);
+@media only screen and (min-width: 680px) {
+  .about-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
-
-@keyframes updown {
-  from {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-
-.field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: column-reverse;
-          flex-flow: column-reverse;
-  margin-bottom: 1.3em;
-  position: relative;
-}
-
-.field__clear {
-  position: absolute;
-  right: 0;
-  margin-bottom: 10px;
-  display: none;
-  cursor: pointer;
-}
-
-label, input, textarea {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  -webkit-transform-origin: left bottom;
-          transform-origin: left bottom;
-}
-
-input {
-  border: none;
-  -webkit-appearance: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  width: 90%;
-}
-
-textarea {
-  border: none;
-  -webkit-appearance: none;
-  border-radius: 5px;
-  width: 95%;
-}
-
-input:focus, textarea:focus {
-  outline: 0;
-}
-
-label {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: .6em;
-}
-
-input:placeholder-shown + label,
-textarea:placeholder-shown + label {
-  cursor: text;
-  max-width: 66.66%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-transform: translate(0.8em, 1.8rem) scale(1.5);
-          transform: translate(0.8em, 1.8rem) scale(1.5);
-}
-
-/**
-* By default, the placeholder should be transparent. Also, it should 
-* inherit the transition.
-*/
-::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: inherit;
-  transition: inherit;
-}
-
-/**
-* Show the placeholder when the input is focused.
-*/
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-/**
-* When the element is focused, remove the label transform.
-* Also, do this when the placeholder is _not_ shown, i.e. when 
-* there's something in the input at all.
-*/
-input:not(:placeholder-shown) + label,
-input:focus + label,
-textarea:not(:placeholder-shown) + label,
-textarea:focus + label {
-  -webkit-transform: translate(0, 0) scale(1);
-          transform: translate(0, 0) scale(1);
-  cursor: pointer;
-  font-size: .9em;
-  font-weight: 600;
-  color: #00cfd6;
-  -webkit-transition: ease-in .2s;
-  transition: ease-in .2s;
-}
-
-/* Show input clear on filled input items */
-input:not(:placeholder-shown) + label + .field__clear,
-textarea:not(:placeholder-shown) + label + .field__clear {
-  display: block;
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=about.css.map */
