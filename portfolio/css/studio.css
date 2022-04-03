@@ -267,6 +267,10 @@ section.hero {
     width: 1200px;
     margin: 0 auto;
   }
+  .modal-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
   .about-row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -661,7 +665,7 @@ p {
   z-index: 1;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-  width: 85%;
+  width: 95%;
   height: 95%;
   background-color: white;
   overflow: scroll;
@@ -670,13 +674,13 @@ p {
 #close {
   float: right;
   margin: 15px 15px 0 0;
-  background-color: white;
-  color: black;
   font-weight: bolder;
   border: black 1.2px solid;
   padding: 14px 16px;
   border-radius: 50px;
   cursor: pointer;
+  color: whitesmoke;
+  background-color: #131313;
 }
 
 .modal-header {

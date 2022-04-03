@@ -96,6 +96,8 @@ display: block;
   float: right;
   margin: 2em;
   width: 2.5em;
+  
+  
 }
 header {
   display: flex;
@@ -313,7 +315,7 @@ section.hero {
 
   .about-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
   }
@@ -343,10 +345,9 @@ section.contact-section {
   margin-top: 4em;
 }
 .about-img {
-  width: 100%;
+  width: 97%;
   height: 400px;
   background-color: antiquewhite;
-  margin: 1.5em 3em;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -358,18 +359,23 @@ section.contact-section {
   background-image: url('https://images.unsplash.com/photo-1481201779555-88fcea2968ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');
 }
 .para{
-  margin-top: 6.5em;
-    width: 90%;
+  margin-top: -2em;
+    width: 100%;
+    color: white;
+}
+.para1{
+  
+    width: 100%;
     color: white;
 }
 .para-1{
-    width: 45%;
+    width: 100%;
     color: white;
 }
 .contact-head {
   color: white;
-  width: 75%;
-  font-size: 3.9em;
+  width: 100%;
+  font-size: 2.9em;
 }
 // ARROW
 .the-arrow {
@@ -521,5 +527,25 @@ section.contact-section {
 @media only screen and (min-width: 680px) { 
   .about-row{
     flex-direction: row;
+  }
+  .para{
+    margin-top: 3.7em;
+    margin-left: 3.2em;
+      width: 90%;
+      color: white;
+  }
+  .para1{
+    margin-top: 6.5em;
+      width: 90%;
+      color: white;
+  }
+  .para-1{
+      width: 45%;
+      color: white;
+  }
+  .contact-head {
+    color: white;
+    width: 75%;
+    font-size: 3.9em;
   }
 }
