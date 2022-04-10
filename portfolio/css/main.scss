@@ -226,12 +226,16 @@ img {
   section.portfolio {
     height: 500px;
   }
-  .intro-heading {
-    font-size: 2rem;
-    width: 48%;
-    line-height: 1.2em;
+
+  .about-img {
+    height: 500px;
+  }
+  .blue-column{
+    height: 600px;
   }
 
+  
+  
 }
 
 @media only screen and (min-width: 920px) {
@@ -260,13 +264,13 @@ ul {
     margin: 0;
 }
 
-ul a {
+nav ul a {
   color: white;
   padding: 1.8em 1.5em;
   font-size: .9rem;
 
 }
-ul a:hover {
+nav ul a:hover {
   color: white;
   font-weight: bolder;
 }
@@ -310,7 +314,55 @@ path {
   display: table;
   clear: both;
 }
+.timeline{
+  
+  margin-top: 1.8rem;
+ }
+ .intro-heading {
+  font-size: 3rem;
+  width: 70%;
+  line-height: 1.2em;
+}
+.intro-para{
+  width: 85%;
+
+}
+
+.contact-heading {
+  color: #00f7ff;
+  text-transform: uppercase;
+  font-size: 5.5em;
+  width: 75%;
+  margin-top: 1.3em;
+}
+.porfolio-img{
+  height: 400px;
+  width: 85%;
+  border-radius: .1em;
+  display: block;
+  margin-left: auto;
+ //// margin-right: auto;
+  float: right;
+  z-index: 1;
+  margin-top: -2.3rem;
+}
+.project-heading{
+  color: white;
+ font-size: 3.5rem;
+ margin-bottom:0;
  
+}
+.project-info {
+  height: 300px;
+  padding-top: 2rem;
+ 
+}
+.project-info1 {
+  height: 400px;
+  justify-items: center;
+  
+
+}
 }
 
 
@@ -412,6 +464,8 @@ path {
   width: 100%;
 }
 
+
+
 .column {
   display: flex;
   flex-direction: column;
@@ -421,7 +475,7 @@ path {
 }
 
 .blue-column {
-  height: 600px;
+  height: auto;
 }
 
 .green-column {
@@ -431,7 +485,7 @@ path {
 
 
 .about-img{
-  height: 99%;
+  height: 350px;
   margin-top: 2px;
   border-radius: 5%;
   box-shadow: none;
@@ -443,6 +497,7 @@ path {
   font-family: 'Druk Wide Bold';
   font-size: 1.7rem;
   color: white;
+  
 }
 .about-info{
   margin-top: 6.5em;
@@ -457,6 +512,9 @@ path {
   .row {
     flex-direction: row;
   }
+  #flex-container{
+    flex-direction: row-reverse;
+  }
   .about-heading , .portfolio-heading {
     font-size: 5.5rem;
     font-weight: 900;
@@ -467,7 +525,7 @@ path {
     width: 70%;
   }
   .about-img{
-    height: 99%;
+    height: 550px;
     margin-top: 2px;
     border-radius: 1%;
   }
@@ -483,6 +541,14 @@ path {
   .about-info{
     margin-top: 0;
     width: 85%;
+  }
+  .static{
+    font-size: 5.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+     color: #00cfd6;
+    line-height: 5.2rem;
+    text-align: left;
   }
 }
 //END ABOUT
@@ -624,13 +690,6 @@ section.contact {
   background-color: #00f7ff
 }
 
-.contact-heading {
-  color: #00f7ff;
-  text-transform: uppercase;
-  font-size: 5.5em;
-  width: 75%;
-  margin-top: 1.3em;
-}
 .contact-subhead {
   font-size: 1.5em;
   margin-bottom: -.3em;
@@ -878,29 +937,29 @@ textarea:not(:placeholder-shown) + label + .field__clear{
 
 @keyframes animate{
 	0%{
-		transform: rotateX(-90deg)translateZ(50px);
+		transform: rotateX(-90deg),translateZ(50px);
 	}
-	6%{transform: rotateX(10deg)translateZ(50px);}
-	12%{transform: rotateX(-5deg)translateZ(50px);}
-	18%{transform: rotateX(1.5deg)translateZ(50px);}
-	24%{transform: rotateX(0deg)translateZ(50px);}
+	6%{transform: rotateX(10deg),translateZ(50px);}
+	12%{transform: rotateX(-5deg),translateZ(50px);}
+	18%{transform: rotateX(1.5deg),translateZ(50px);}
+	24%{transform: rotateX(0deg),translateZ(50px);}
 
 	
-	82%{transform: rotateX(0deg)translateZ(50px);}
-	88%{transform: rotateX(5deg)translateZ(50px);}
-	94%{transform: rotateX(-10deg)translateZ(50px);}
+	82%{transform: rotateX(0deg),translateZ(50px);}
+	88%{transform: rotateX(5deg),translateZ(50px);}
+	94%{transform: rotateX(-10deg),translateZ(50px);}
 	100%{
-		transform: rotateX(90deg)translateZ(50px);
+		transform: rotateX(90deg),translateZ(50px);
 	}
 }
 
 .static{
-  font-size: 4.5rem;
+  font-size: 5.2rem;
   font-weight: 900;
   text-transform: uppercase;
- 
-  color: #00cfd6;
-  line-height: 4.5rem;
+   color: #00cfd6;
+  line-height: 5.2rem;
+  text-align: left;
 }
 
 /////////////////////////PORTFOLIO///////////////////////////////////
@@ -947,11 +1006,11 @@ textarea:not(:placeholder-shown) + label + .field__clear{
   cursor: pointer;
  
   width: auto;
-  padding: 3px 11px;
+  padding: 4px 13px;
  
   color: white;
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: bolder;
+  font-size: 35px;
   transition: 0.6s ease;
   border-radius: 50%;
   border: #fff 2px solid;
@@ -960,30 +1019,12 @@ textarea:not(:placeholder-shown) + label + .field__clear{
 .controls{
   display: flex; justify-content: space-between;
   margin-top: 1.8rem;
+  bottom: 0;
   height: auto;
-}
-.porfolio-img{
-  height: 320px;
-  width: 83%;
-  border-radius: .3em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
-  margin-top: -2.3rem;
+  width: 48%;
 }
 
-.project-info {
-  height: auto;
-  padding-top: 2rem;
- 
-}
-.project-info1 {
-  height: 400px;
-  justify-items: center;
-  
 
-}
 .next {
  float: right;
 }
@@ -991,12 +1032,7 @@ textarea:not(:placeholder-shown) + label + .field__clear{
   float: left;
 }
 
-.project-heading{
-   color: white;
-  font-size: 2.5rem;
-  margin-bottom:0;
-  
-}
+
 .mySlides {display: none;
 flex-direction: column-reverse;}
 .dot {
@@ -1050,14 +1086,150 @@ flex-direction: column-reverse;}
  
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
   .cards {
     width: 100%;
     display: block;
     margin-bottom: 20px;
   }
+  .about-heading , .portfolio-heading, .contact-heading {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #00cfd6;
+    text-align: center;
+    width: 100%;
+  }
+
+
+}
+@media screen and (max-width: 920px) {
+  
+  .static{
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+   
+    color: #00cfd6;
+    line-height: 3.9rem;
+    text-align: center;
+  }
   .intro-heading {
     font-size: 2rem;
-  
+    text-align: center;
+    width: 100%;
   }
+  .intro-para{
+    width: 100%;
+    text-align: center;
+  }
+  .porfolio-img{
+    height: 85%;
+  }
+  .project-heading{
+    color: #00cfd6;
+   font-size: 2.8rem;
+   margin-bottom:0;
+   text-align: center;
+   
+ }
+ .project-details{
+   text-align: center;
+ }
+ .project-info ul li {
+  text-align: center;
+ }
+ .about-name{
+   text-align: center;
+ }
+ .about-info p {
+   text-align: center;
+ }
+ .contact-subhead {
+  font-size: 1.5em;
+  margin-bottom: -.3em;
+  color: white;
+  text-align: center;
 }
+.contact-subpara {
+   text-align: center;
+}
+.tm-contact-link{
+  text-align: center;
+}
+.socialmedia-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.project-info {
+  height: auto;
+  padding-top: 2rem;
+ 
+}
+.project-info1 {
+  height: 400px;
+  justify-items: center;
+  
+
+}
+
+}
+///////////////////TIMELINE////////
+.timeline{
+  
+ margin-bottom: 23em;
+}
+section.intro-section {
+  color: white;
+  height: auto;
+ 
+}
+.post{
+  width: 90%;
+  border-left: 2px solid #00cfd6;
+  padding-top: 20px;
+  padding-bottom: -20px;
+  padding-left: 20px;
+  position: relative;
+  
+}
+
+.post:before {
+
+  font-family: "Font Awesome 5 Free"; 
+
+  content: "";
+  color: #00cfd6;
+  position: absolute;
+  top: 30px;
+  left: -13px;
+  background-color: rgb(26, 26, 26);
+  border: 2px solid #00cfd6;
+  border-radius:50%;
+  height: 18px;
+  width: 18px;
+}
+
+
+.post-inner{
+ 
+  padding: 5px;
+  //box-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+  border-radius: 4px;
+ 
+}
+
+ 
+.post-inner h1{
+  font-size: 20px;
+  font-weight: 600;
+  color: #00f7ff;
+}
+
+.post-inner p {
+  font-size: 14px;
+  font-weight: 300;
+
+}
+
+
