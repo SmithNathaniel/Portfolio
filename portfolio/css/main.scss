@@ -225,6 +225,7 @@ img {
   }
   section.portfolio {
     height: 500px;
+    margin-bottom: 13em;
   }
 
   .about-img {
@@ -336,8 +337,8 @@ path {
   margin-top: 1.3em;
 }
 .porfolio-img{
-  height: 400px;
-  width: 85%;
+  height: 100%;
+  width: 82%;
   border-radius: .1em;
   display: block;
   margin-left: auto;
@@ -450,7 +451,6 @@ path {
    
    width: 100%;
    min-height: 200px;
-   background-color: #00f7ff;
  }
  .some-page-wrapper {
  margin-top: 5em;
@@ -520,7 +520,7 @@ path {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: -.2em;
-    margin-top: 1em;
+    //margin-top: 1em;
     color: #00cfd6;
     width: 70%;
   }
@@ -687,7 +687,6 @@ path {
 
 section.contact {
   min-height: 600px;
-  background-color: #00f7ff
 }
 
 .contact-subhead {
@@ -989,11 +988,12 @@ textarea:not(:placeholder-shown) + label + .field__clear{
 
 .counter{
   color: #999;
-  font-size: 3rem;
+  font-size: 4rem;
   position: relative;
   z-index: -1;
   margin: 0 auto;
-  left: 0;
+  left: 2%;
+  top: 9%;
   
   /* Adjust this value to move the positioned div up and down */
 
@@ -1182,6 +1182,7 @@ flex-direction: column-reverse;}
 section.intro-section {
   color: white;
   height: auto;
+  margin-bottom: 6rem;
  
 }
 .post{
